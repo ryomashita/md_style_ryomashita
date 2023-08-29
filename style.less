@@ -8,4 +8,52 @@
   // eg: background-color: blue;
   //  @import (css) "https://unpkg.com/docsify@4.12.2/lib/themes/vue.css";
 
+  font-family: 'Meiryo';
+
+  // add section number
+  h1 {
+    &:not(.toc) {
+      counter-increment: h1SectionCounter;
+      counter-reset: h2SectionCounter;
+    }
+  }
+  h1:not(.toc):before {
+    content: counter(h1SectionCounter) ". ";
+  }
+  h2{
+    &:not(.toc) {
+      counter-increment: h2SectionCounter;
+      counter-reset: h3SectionCounter;
+    }
+  }
+  h2:not(.toc):before {
+    content: counter(h1SectionCounter) "." counter(h2SectionCounter) ". ";
+  }
+  h3 {
+    &:not(.toc) {
+      counter-increment: h3SectionCounter;
+      counter-reset: h4SectionCounter;
+    }
+  }
+  h3:not(.toc):before {
+    content: counter(h1SectionCounter) "." counter(h2SectionCounter) "." counter(h3SectionCounter) ". ";
+  }
+  h4 {
+    &:not(.toc) {
+      counter-increment: h4SectionCounter;
+      counter-reset: h5SectionCounter;
+    }
+  }
+  h4:not(.toc):before {
+    content: counter(h1SectionCounter) "." counter(h2SectionCounter) "." counter(h3SectionCounter) "." counter(h4SectionCounter) ". ";
+  }
+  h5 {
+    &:not(.toc) {
+      counter-increment: h5SectionCounter;
+      counter-reset: h6SectionCounter;
+    }
+  }
+  h5:not(.toc):before {
+    content: counter(h1SectionCounter) "." counter(h2SectionCounter) "." counter(h3SectionCounter) "." counter(h4SectionCounter) "." counter(h5SectionCounter) ". ";
+  }
 }
