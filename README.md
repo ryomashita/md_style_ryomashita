@@ -8,5 +8,5 @@ Created to fulfill the following preferences:
 ## usage
 1. Install VSCode and MPE extension.
 2. Download this repository.
-3. Copy `style.less` to `~/.mume/style.less`.
+3. Copy `style.less` to `~/.crossnote/style.less`.
     + if needed, back up the original `style.less` file.
